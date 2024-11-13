@@ -1,7 +1,8 @@
 import Link from "next/link"
 import s from "./Header.module.scss"
 import { navbar_data } from "@/data"
-import { BottomNavbar } from "../BottomNavbar/BottomNavbar"
+import { BottomNavbar } from "../BottomNavbar"
+
 export function Header(){
     return (
         <div className={s.header}>

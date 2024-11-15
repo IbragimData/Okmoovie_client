@@ -1,0 +1,1 @@
+export { SliderMovieJanry } from "./SliderMovieJanry";

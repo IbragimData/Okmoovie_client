@@ -1,2 +1,5 @@
 export * from "./Header"
 export * from "./BottomNavbar"
+export * from "./BannerMovie"
+export * from "./SliderMovie"
+export * from "./SliderMovieJanry"

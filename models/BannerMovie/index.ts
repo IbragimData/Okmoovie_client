@@ -1,0 +1,1 @@
+export { BannerMovie } from "./BannerMovie";

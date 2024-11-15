@@ -5,16 +5,21 @@
     height: 575px;
     align-items: flex-end;
     background-color: #383838;
-
-    &__bottomgradient{
+    &::before,
+    &::after{
+        content: "";
         position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 126px; 
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(9, 9, 9, 0.76) 76.5%, #090909 100%);
+        z-index: 1;
+        pointer-events: none;
     }
-    &__topgradient {
+    &::before {
+        top: 0;
+        left: 0;
+        width: 40%; 
+        height: 100%;
+         background: linear-gradient(270deg, rgba(9, 9, 9, 0) 0%, #090909 100%);;
+    }
+    &::after {
         position: absolute;
         top: 0;
         left: 0;
@@ -22,44 +27,60 @@
         height: 73px; 
         background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(9, 9, 9, 0.76) 76.5%, #090909 100%);
     }
-
-    &__leftgradient {
+    &__bottomgradient{
         position: absolute;
-        top: 0;
+        bottom: 0;
         left: 0;
-        width: 400px; 
-        height: 100%;
-         background: linear-gradient(270deg, rgba(9, 9, 9, 0) 0%, #090909 100%);;
+        width: 100%;
+        height: 130px; 
+        pointer-events: none;
+        background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #090909 100%);
+    }
+    &__content{
+        z-index: 1;
+        margin: 0px 0px 40px 60px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
     }
     &__title{
-        z-index: 1;
-        margin: 0px 0px 41px 60px;
         width: 400px;
-        height: 199px;
-        
-    }
-    &__text{
         height: 140px;
         background: linear-gradient(0deg, #00f0ff 0%, #00c2ff 100%);
     }
     &__list{
-        margin: 25px 0px 0px 0px;
         display: flex;
-        padding: 0px 1px;
-        width: 291px;
-        height: 33px;
-        gap: 15px;
-        justify-content: space-between;
+        column-gap: 30px;
         align-items: center;
        }
-    &__liScore{
-        border-radius: 7px;
-        padding: 5px 10px;
-        width: 44px;
-        background: #5e5e5e;
-        list-style: none;
-    }
-    
-
-    
+  
 }
+ .list{
+    &__box{
+        padding: 5px 10px;
+        background: #5e5e5e;
+        font-weight: 400;
+        font-size: 20px;
+        color: #fff;
+        border-radius: 7px;
+    }
+    &__text{
+        font-weight: 500;
+        font-size: 20px;
+        color: #fff;
+        display: flex;
+        align-items: flex-start;
+        align-items: center;
+        &::before {
+            position: absolute;
+            content: "";
+            pointer-events: none;
+            z-index: 2;
+            width: 4px;
+            height: 4px;
+            background-color: #999999;
+            margin-left: -15px;
+            border-radius: 100px;
+        }
+    }
+ }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.scss";
-import { Header,BottomNavbar,BannerMovie,SliderMovie } from "@/models";
+import { Header } from "@/models";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,8 +16,7 @@ export default function RootLayout({
     <html lang="ru">
       <body>
         <Header/>
-        <BannerMovie/>
-        <SliderMovie/>
+        {children}
       </body>
     </html>
   );
